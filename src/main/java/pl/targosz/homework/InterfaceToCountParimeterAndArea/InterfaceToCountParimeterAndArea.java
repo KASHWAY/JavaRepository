@@ -1,6 +1,6 @@
 package pl.targosz.homework.InterfaceToCountParimeterAndArea;
 
 public interface InterfaceToCountParimeterAndArea {
-    double Area();
-    double Parimeter();
+    double area();
+    double parimeter();
 }

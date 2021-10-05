@@ -9,13 +9,13 @@ class SquareTest {
     @Test
     public void SquareAreaTest() {
         Square square = new Square(15);
-        double result = square.Area();
+        double result = square.area();
         Assertions.assertEquals(225,result);
 
     }
     public void SquareParimeterTest() {
         Square square = new Square(15);
-        double result = square.Parimeter();
+        double result = square.parimeter();
         Assertions.assertEquals(60,result);
     }
 }

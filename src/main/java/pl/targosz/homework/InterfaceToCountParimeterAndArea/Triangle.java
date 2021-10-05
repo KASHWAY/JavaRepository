@@ -1,7 +1,7 @@
 package pl.targosz.homework.InterfaceToCountParimeterAndArea;
 
 public class Triangle implements InterfaceToCountParimeterAndArea {
-    double a,b,c,h;
+    private double a,b,c,h;
 
     public Triangle(double a, double b, double c, double h) {
         this.a = a;
@@ -12,12 +12,12 @@ public class Triangle implements InterfaceToCountParimeterAndArea {
 
     @Override
 
-    public double Area() {
+    public double area() {
         return a*h/2;
     }
 
     @Override
-    public double Parimeter() {
+    public double parimeter () {
         return a+b+c;
     }
 }
