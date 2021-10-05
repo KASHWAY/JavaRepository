@@ -1,15 +1,15 @@
 package pl.targosz.homework.BillCalculate;
 
 public class BillCalculator {
-    public static double calculate(double bill,double servicePayment) {
+    private static double calculate(double bill,double servicePayment) {
         return bill+servicePayment;
     }
 
-    public static double calculate(double bill, double servicePayment, double discount) {
+    protected static double calculate(double bill,double servicePayment, double discount) {
         return bill+servicePayment-discount;
     }
 
-    public static double calculate(double bill, double servicePayment, double takeOutPayment) {
+    private static double calculate(protected double bill,protected  double servicePayment,protected double takeOutPayment) {
         return bill+servicePayment+takeOutPayment;
     }
 }
