@@ -10,5 +10,6 @@ public class FileSecondLineWrite {
         File file = new File("E:\\KURS JAVA\\Workspaceofficial\\JavaRepository\\src\\main\\java\\pl\\targosz\\homework\\resources\\data.txt");
         String text = Files.readString(Path.of("E:\\KURS JAVA\\Workspaceofficial\\JavaRepository\\src\\main\\java\\pl\\targosz\\homework\\resources\\data.txt"));
 
+
     }
 }
