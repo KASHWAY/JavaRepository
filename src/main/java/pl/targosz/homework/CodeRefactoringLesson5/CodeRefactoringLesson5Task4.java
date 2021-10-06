@@ -19,18 +19,18 @@ class Employee {
 
     }
 
-    public Employee(String name, String surname, int age, BigDecimal value) {
+    public Employee(String name, String surname, int age, BigDecimal baseSalary) {
         this.name = name;
         this.surname = surname;
         this.age = age;
-        this.baseSalary = value;
+        this.baseSalary = baseSalary;
     }
 
-    public Employee(String name, int age, BigDecimal value1, BigDecimal value2, String surname) {
+    public Employee(String name, int age, BigDecimal baseSalary, BigDecimal bonus, String surname) {
         this.name = name;
         this.age = age;
-        this.baseSalary = value1;
-        this.bonus = value2;
+        this.baseSalary = baseSalary;
+        this.bonus = bonus;
         this.surname = surname;
     }
 
