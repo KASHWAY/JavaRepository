@@ -5,14 +5,11 @@ public class BillCalculator {
         return bill+servicePayment;
     }
 
-    private static double calculate() {
-        double bill=15000;
-        double servicePayment=1500000;
-        double discount = 1500;
+    public static double calculate(double bill,double servicePayment,private double discount) {
         return bill+servicePayment-discount;
     }
 
-    private static double calculate(double bill,double servicePayment,double takeOutPayment) {
+    public static double calculate(double bill, double servicePayment,private double takeOutPayment) {
         return bill+servicePayment+takeOutPayment;
     }
 }
