@@ -6,6 +6,7 @@ public class ConvertMinutesToSeconds {
     }
     public static void main(String[] args) {
 
+
         System.out.println(ConvertMinutes(50));
         System.out.println(ConvertMinutes(120));
         System.out.println(ConvertMinutes(20));
