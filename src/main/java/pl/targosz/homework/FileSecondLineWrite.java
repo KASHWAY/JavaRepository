@@ -3,19 +3,17 @@ package pl.targosz.homework;
 
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 
 public class FileSecondLineWrite {
     public static void main(String[] args) throws IOException {
-        Path file = Paths.get("src/main/java/pl/targosz/homework/resources/data.txt");
-        double lineCounter = Files.lines(file).count();
         int n = 0;
+        List<String> line = Files.readAllLines(Paths.get("src/main/java/pl/targosz/homework/resources/data.txt"));
+        while (n < line.size()) {
 
-        while (n < lineCounter) {
-            String line = Files.readAllLines(Paths.get("src/main/java/pl/targosz/homework/resources/data.txt")).get(n);
-            System.out.println(line);
+            System.out.println(line.get(n));
             n += 2;
         }
 
