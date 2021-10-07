@@ -11,7 +11,7 @@ public class Manager extends Employee {
 
     @Override
     int calculateMonthlySalary() {
-        return Payment + 2000 + bonus;
+        return PAYMENT + 2000 + bonus;
     }
 
     @Override

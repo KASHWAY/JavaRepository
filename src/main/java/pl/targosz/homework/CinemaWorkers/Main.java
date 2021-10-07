@@ -3,7 +3,7 @@ package pl.targosz.homework.CinemaWorkers;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("The base payment is : " + Employee.Payment + " dollars.");
+        System.out.println("The base payment is : " + Employee.PAYMENT + " dollars.");
         System.out.println(("----------------------------------------"));
 
         Manager manager = new Manager(2015, 1000);
@@ -15,7 +15,7 @@ public class Main {
 
         System.out.println(("----------------------------------------"));
 
-        TicketSeller ticketSeller = new TicketSeller(2018, 15);
+        TicketSeller ticketSeller = new TicketSeller(2018);
         ticketSeller.setName("Mateusz");
         ticketSeller.setSurname("Mruwczynski");
         ticketSeller.calculateMonthlySalary();

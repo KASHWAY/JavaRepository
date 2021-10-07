@@ -1,15 +1,13 @@
 package pl.targosz.homework.CinemaWorkers;
 
 public class TicketSeller extends Employee{
-    private int howManyTicketsLeft;
-    public TicketSeller(int yearOfEmployment, int TicketsLeft) {
+    public TicketSeller(int yearOfEmployment) {
         super(yearOfEmployment);
-        this.howManyTicketsLeft=TicketsLeft;
     }
 
     @Override
     int calculateMonthlySalary() {
-        return Payment + 1000;
+        return PAYMENT + 1000;
     }
 
     @Override

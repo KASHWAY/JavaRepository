@@ -3,7 +3,7 @@ package pl.targosz.homework.CinemaWorkers;
 public abstract class Employee {
     private String name, surname;
     protected int yearOfEmployment;
-    protected static int Payment = 3000;
+    protected static int PAYMENT = 3000;
 
     abstract int calculateMonthlySalary();
 
