@@ -7,11 +7,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ReturningTextLengthTest {
 
+
+
     @ParameterizedTest
-    @MethodSource("textLength")
+    @MethodSource("numberSomething")
     void shouldReturn5(String input) {
 
-        assertEquals(5, ReturningTextLength.textLength(input));
+        assertEquals(5, (input));
+    }
+    private static int lengthOfTheText(String text) {
+        return text.length();
     }
 
 }
