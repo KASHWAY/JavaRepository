@@ -10,12 +10,13 @@ class TextToBigLettersTest {
     @ParameterizedTest
     @ValueSource(strings = {"kochamy mentora mateusza marczaka oraz mateusza patera"})
     void shouldReturnTextInBigLetters(String input) {
-        assertEquals(input.toUpperCase(), TextToBigLetters.TextToUpperCase(input));
+        assertEquals(input.toUpperCase(), TextToBigLetters.textToUpperCase(input));
     }
 
     @ParameterizedTest
     @NullAndEmptySource()
-    void shouldDoSomething(String input) {
-        assertTrue(input.length() > 0);
+    void shouldReturnTrue(String input) {
+        assertTrue(TextToBigLetters.textToUpperCase(input)!=null);
+        assertTrue(TextToBigLetters.textToUpperCase(input)!="");
     }
 }
