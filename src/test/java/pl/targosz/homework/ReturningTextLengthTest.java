@@ -10,6 +10,7 @@ class ReturningTextLengthTest {
     @ParameterizedTest
     @MethodSource("textLength")
     void shouldReturn5(String input) {
+
         assertEquals(5, ReturningTextLength.textLength(input));
     }
 
