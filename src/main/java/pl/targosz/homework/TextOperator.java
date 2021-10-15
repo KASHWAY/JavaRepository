@@ -16,7 +16,7 @@ public class TextOperator {
     }
 
     public static void main(String[] args) {
-        String text = "To mój tekst";
+        String text = "Sigib";
         String[] someArray = text.split("");
         for (int i = 0; i < someArray.length; i++) {
             if (someArray[i].contains("")) {
@@ -26,6 +26,7 @@ public class TextOperator {
             }
             else
                     System.out.println("There is no characters!");
+                    break;
         }
         System.out.println(isPalindrome(text));
 
