@@ -1,8 +1,8 @@
 package pl.targosz.homework.Lesson7Task8;
 
-public class WorkerPaymentCalc implements BaseSalary, SaturdayBonus, HowManySaturdays {
+public class WorkerPaymentCalc implements BaseSalary, HowManySaturdays {
 
-    public WorkerPaymentCalc(BaseSalary baseSalary,int bonus, SaturdayBonus saturdayBonus,HowManySaturdays howManySaturdays) {
+    public WorkerPaymentCalc(BaseSalary baseSalary, int bonus, HowManySaturdays howManySaturdays) {
     }
 
 
@@ -10,17 +10,16 @@ public class WorkerPaymentCalc implements BaseSalary, SaturdayBonus, HowManySatu
         return basePayment;
     }
 
-
-    public int saturdayBonus(int saturdayBonus) {
-        return saturdayBonus;
-    }
-
-    @Override
     public int howManySaturdays(int number) {
         return number;
     }
 
-    public static int paymentCalculator(int baseSalary, int bonus, int saturdayBonus, int howManySaturdays) {
+    public int saturdayBonus(int saturdayBonus, int howManySaturdays) {
+        return saturdayBonus;
+    }
+
+
+    public static int paymentCalculator(BaseSalary baseSalary, int bonus,int saturdayBonus, HowManySaturdays howManySaturdays) {
         return baseSalary + bonus + saturdayBonus * howManySaturdays;
     }
 
