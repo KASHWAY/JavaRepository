@@ -13,19 +13,20 @@ class CurrencyCalculatorTest {
     @Test
     void shouldReturnTheSellAmountFromGBPToPLN() {
         CurrencyInterface currencyInterface = Mockito.mock(CurrencyInterface.class);
+        when(currencyInterface.buyRate(Currency.EUR)).thenReturn(BigDecimal.valueOf(3));
+
         CurrencyCalculator currencyCalculator = new CurrencyCalculator(currencyInterface);
 
-        when(currencyCalculator.sellRateCalculator(BigDecimal.valueOf(135.456),Currency.GBP)).thenReturn(BigDecimal.valueOf(135.456*5.42));
-
-        assertEquals(734.17152,currencyCalculator.sellRateCalculator(BigDecimal.valueOf(135.456),Currency.GBP));
+        assertEquals(currencyCalculator.buyRateCalculator(BigDecimal.TEN, Currency.EUR), BigDecimal.valueOf(30));
     }
     @Test
     void shouldReturnTheBuyAmountFromEURToPLN() {
         CurrencyInterface currencyInterface = Mockito.mock(CurrencyInterface.class);
+        when(currencyInterface.sellRate(Currency.GBP)).thenReturn(BigDecimal.valueOf(5));
+
         CurrencyCalculator currencyCalculator = new CurrencyCalculator(currencyInterface);
 
-        when(currencyCalculator.buyRateCalculator(BigDecimal.valueOf(400),Currency.EUR)).thenReturn(BigDecimal.valueOf(400.100*0.22));
-
+        assertEquals(currencyCalculator.sellRateCalculator(BigDecimal.TEN,Currency.GBP),BigDecimal.valueOf(50));
 
     }
 }
