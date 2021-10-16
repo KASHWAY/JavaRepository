@@ -1,17 +1,10 @@
 package pl.targosz.homework.Lesson8Task2;
 
-import java.util.Arrays;
-
 public class KashwayList implements OwnList {
 
     private Integer[] kashwayList;
     private int maximumCapacity;
     private int size;
-    private static final int BASE_CAPACITY = 10;
-
-    public KashwayList() {
-        this(BASE_CAPACITY);
-    }
 
     public KashwayList(int maximumCapacity) {
         this.maximumCapacity = maximumCapacity;
@@ -42,7 +35,7 @@ public class KashwayList implements OwnList {
     @Override
     public Integer get(int i) {
         if (i < 0 || i >= size)
-            System.out.println("It is out of size!");
+            throw new RuntimeException("Out of size.");
 
         return kashwayList[i];
 
@@ -51,7 +44,7 @@ public class KashwayList implements OwnList {
     @Override
     public void add(int index, Integer element) {
         if (index < 0 || index >= size)
-            System.out.println("It is out of size!");
+            throw new RuntimeException("Out of size.");
 
         System.arraycopy(kashwayList, index, kashwayList, index + 1, size - index);
         kashwayList[index] = element;
@@ -61,7 +54,7 @@ public class KashwayList implements OwnList {
     @Override
     public void remove(int index) {
         if (index < 0 || index >= size)
-            System.out.println("It is out of size!");
+            throw new RuntimeException("Out of size.");
         System.arraycopy(kashwayList, index++, kashwayList, index, size - index);
         size--;
     }
@@ -69,7 +62,7 @@ public class KashwayList implements OwnList {
     @Override
     public String toString() {
         StringBuilder pieces = new StringBuilder();
-        for (int i=0; i<size;i++)   {
+        for (int i = 0; i < size; i++) {
             pieces.append(kashwayList[i].toString());
         }
         return pieces.toString();
