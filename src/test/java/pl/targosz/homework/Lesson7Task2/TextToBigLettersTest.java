@@ -16,7 +16,6 @@ class TextToBigLettersTest {
     @ParameterizedTest
     @NullAndEmptySource()
     void shouldReturnTrue(String input) {
-        assertTrue(TextToBigLetters.textToUpperCase(input)!=null);
-        assertTrue(TextToBigLetters.textToUpperCase(input)!="");
+        assertEquals(TextToBigLetters.textToUpperCase(input), "");
     }
 }
