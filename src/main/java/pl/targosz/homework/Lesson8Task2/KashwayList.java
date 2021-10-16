@@ -20,10 +20,7 @@ public class KashwayList implements OwnList {
 
     @Override
     public boolean isEmpty() {
-        if (kashwayList.length == 0)
-            return true;
-        else
-            return false;
+        return kashwayList.length == 0;
     }
 
     @Override
