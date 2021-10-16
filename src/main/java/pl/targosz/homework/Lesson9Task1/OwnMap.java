@@ -1,20 +1,20 @@
 package pl.targosz.homework.Lesson9Task1;
 
-public interface OwnMap {
-    boolean put(String key, String value);
-    boolean containsKey(String key);
-    boolean containsValue(Object value);
+public interface OwnMap<K, V> {
+    boolean put(K key, V value);
+
+    boolean containsKey(K key);
+
+    boolean containsValue(V value);
 
     /**
-     * @param key
-     *  key for which (key, value) entry will be removed
-     *
+     * @param key key for which (key, value) entry will be removed
      * @return value for given key
      */
-    String remove(String key);
+    V remove(K key);
 
     /**
      * Return value for given key
      */
-    String get(String key);
+    V get(K key);
 }
