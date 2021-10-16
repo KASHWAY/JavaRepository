@@ -43,6 +43,7 @@ public class Main {
         System.out.println("Your names list in reverse : " + names);
 
         names.add("Anna");
+
         System.out.println(changeName("Joanna",names));
         System.out.println(names);
     }
