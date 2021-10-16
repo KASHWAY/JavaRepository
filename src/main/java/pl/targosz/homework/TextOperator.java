@@ -7,28 +7,24 @@ public class TextOperator {
         while (backward > forward) {
             char forwardChar = text.charAt(forward++);
             char backwardChar = text.charAt(backward--);
-            if (forwardChar != backwardChar)
+            if (forwardChar != backwardChar) {
                 return false;
-
-
+            }
         }
         return true;
     }
 
     public static void main(String[] args) {
         String text = "Sigib";
-        String[] someArray = text.split("");
-        for (int i = 0; i < someArray.length; i++) {
-            if (someArray[i].contains("")) {
-                System.out.println("There is a char!");
-                System.out.println("Text length : " + text.length());
-                break;
-            }
-            else
-                    System.out.println("There is no characters!");
-                    break;
-        }
-        System.out.println(isPalindrome(text));
 
+        method(text);
+
+    }
+
+    private static void method(String text) {
+        if (!(text == null || text.equals(""))) {
+            System.out.println(isPalindrome(text));
+            System.out.println(text.length());
+        }
     }
 }
