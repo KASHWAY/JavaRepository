@@ -4,15 +4,31 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
+import static org.mockito.Mockito.when;
+
 class WorkerPaymentCalcTest {
     @Test
-    void shouldReturnWholePayment() {
+    void shouldReturnWholePaymentWithoutBonus() {
         BaseSalary baseSalary = Mockito.mock(BaseSalary.class);
         HowManySaturdays howManySaturdays = Mockito.mock(HowManySaturdays.class);
-        WorkerPaymentCalc workerPaymentCalc = new WorkerPaymentCalc(baseSalary,500,saturdayBonus,howManySaturdays);
+        when(baseSalary.get()).thenReturn(4000);
+        when(howManySaturdays.get()).thenReturn(5);
 
-        Assertions.assertEquals(12500,workerPaymentCalc.paymentCalculator(baseSalary,500,saturdayBonus,howManySaturdays));
+        WorkerPaymentCalc workerPaymentCalc = new WorkerPaymentCalc(baseSalary, howManySaturdays);
 
+        Assertions.assertEquals(9000, workerPaymentCalc.calculate(0));
+    }
+
+    @Test
+    void shouldReturnWholePaymentWithBonus() {
+        BaseSalary baseSalary = Mockito.mock(BaseSalary.class);
+        HowManySaturdays howManySaturdays = Mockito.mock(HowManySaturdays.class);
+        when(baseSalary.get()).thenReturn(4000);
+        when(howManySaturdays.get()).thenReturn(5);
+
+        WorkerPaymentCalc workerPaymentCalc = new WorkerPaymentCalc(baseSalary, howManySaturdays);
+
+        Assertions.assertEquals(9500, workerPaymentCalc.calculate(500));
     }
 
 }
